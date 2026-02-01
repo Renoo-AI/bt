@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="theme-color" content="#ffffff" />
+    <title>boutique tounis</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style data-hid="boutique-wzco-css-vars">
+      @layer base {
+        :root {
+          color-scheme: light;
+          --font-family: 'Poppins', sans-serif;
+          --btn-bg: #10b981;
+          --body-bg: #fdfdfd;
+          --bg-footer: #ffffff;
+          --btn-color: #ffffff;
+          --font-size: 15px;
+          --nav-width: container;
+          --line-hight: 1.6;
+          --text-color: #0f172a;
+          --font-weight: 400;
+          --color-footer: #0f172a;
+          --footer-width: container;
+          --primary-color: #10b981;
+          --bg-header-menu: #ffffff;
+          --hn-font-weight: 600;
+          --container-width: 1200px;
+          --btn-border-color: rgba(0, 0, 0, .05);
+          --btn-border-width: 1px;
+          --btn-border-radius: 16px;
+          --color-header-menu: #0f172a;
+          --header-top-bg: #ecfdf5;
+          --header-top-color: #065f46;
+          --btn-primary-solid-background: #10b981;
+          --btn-primary-solid-background-hover: #059669;
+          --btn-primary-solid-color: #ffffff;
+        }
+      }
+
+      * {
+        -webkit-tap-highlight-color: transparent;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: var(--font-family);
+        background-color: var(--body-bg);
+        color: var(--text-color);
+        font-size: var(--font-size);
+        line-height: var(--line-hight);
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      /* Ultimate Fix for Mobile "Black Input" Bug */
+      textarea, input, select {
+        background-color: #ffffff !important;
+        color: #000000 !important;
+        opacity: 1 !important;
+        border-color: #e2e8f0 !important;
+        -webkit-text-fill-color: #000000 !important;
+      }
+      
+      textarea::placeholder, input::placeholder {
+        color: #94a3b8 !important;
+        -webkit-text-fill-color: #94a3b8 !important;
+      }
+
+      .safe-bottom {
+        padding-bottom: calc(1rem + env(safe-area-inset-bottom));
+      }
+
+      .btn-primary-solid {
+        background-color: var(--btn-primary-solid-background);
+        color: var(--btn-primary-solid-color);
+        border-radius: var(--btn-border-radius);
+        padding: 1.1rem 1.5rem;
+        font-weight: 700;
+        transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.75rem;
+        box-shadow: 0 10px 15px -3px rgba(16, 185, 129, 0.1), 0 4px 6px -4px rgba(16, 185, 129, 0.1);
+      }
+      
+      .btn-primary-solid:active {
+        transform: scale(0.96);
+        filter: brightness(0.95);
+      }
+
+      .mobile-nav-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0.6rem;
+        gap: 0.35rem;
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: #64748b;
+        transition: all 0.2s ease;
+        position: relative;
+      }
+      
+      .mobile-nav-item.active {
+        color: var(--primary-color);
+      }
+
+      .mobile-nav-item.active::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        width: 12px;
+        height: 3px;
+        background: var(--primary-color);
+        border-radius: 10px;
+      }
+
+      @media (min-width: 768px) {
+        ::-webkit-scrollbar {
+          width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+          background: #f8fafc;
+        }
+        ::-webkit-scrollbar-thumb {
+          background: #e2e8f0;
+          border-radius: 20px;
+        }
+      }
+    </style>
+    <script type="importmap">
+    {
+      "imports": {
+        "@google/genai": "https://esm.sh/@google/genai@^1.39.0",
+        "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+        "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+        "react": "https://esm.sh/react@^19.2.4",
+        "react/": "https://esm.sh/react@^19.2.4/"
+      }
+    }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

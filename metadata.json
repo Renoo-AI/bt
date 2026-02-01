@@ -1,0 +1,7 @@
+{
+  "name": "boutique tounis",
+  "description": "An intelligent product categorization tool that uses AI to identify and sort items into specific categories like Home, Kitchen, Beauty, Sport, and more based on images or descriptions.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
